@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Signup Page</title>
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./style/signup.css" />
     <script>
-		function showAlert(message) {
-			alert(message);
-		}
-	</script>
+    function showAlert(message) {
+        alert(message);
+    }
+    </script>
 </head>
+
 <body>
-	<h1>Signup Page</h1>
-	<?php
+    <h1>	</h1>
+    <?php
 		require_once('./db_connect.php');
 
 		if(isset($_POST['submit'])) {
@@ -58,7 +61,71 @@
 		// Close database connection
 		mysqli_close($conn);
 	?>
-	<form method="POST" action="">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="index.html" method="post">
+                <h1> Sign Up </h1>
+
+  
+
+                   
+                    <label for="fname"> First Name:</label>
+
+                    <input type="text" id="name" name="fname" placeholder="First Name">
+                    <label for="lname"> Last Name:</label>
+
+                    <input type="text" id="name" name="fname" placeholder="Last Name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="mail" name="user_email" placeholder="Email">
+
+                    
+
+
+
+
+
+
+                    <label for="AGE"> Age:</label>
+
+                    <input type="text" id="name" name="age" placeholder="Age">
+
+
+
+
+
+                    <label for="job">Gender:</label>
+                    <select id="job" name="user_job">
+                        <option>Select Gender</option>
+
+                        <option value="male">MALE</option>
+                        <option value="female">FEMALE</option>
+                        <option value="other">OTHER</option>
+
+
+                    </select>
+					<label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" id="password" name="cpassword" placeholder="Confirm Password">
+
+
+            
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <form method="POST" action="">
 		<label>First Name:</label><br>
 		<input type="text" name="fname"><br>
 		<label>Last Name:</label><br>
@@ -81,7 +148,8 @@
 		<input type="password" name="cpassword"><br>
 		<input type="submit" name="submit" value="Signup">
 	</form>
-    <p>Alrady have an account? <a href="login.php">Login here</a>.</p>
+    <p>Alrady have an account? <a href="login.php">Login here</a>.</p> -->
 </body>
 <script src="./script/script.js" async defer></script>
+
 </html>
