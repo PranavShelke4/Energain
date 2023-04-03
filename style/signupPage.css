@@ -1,0 +1,108 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-image: url('https://i.pinimg.com/originals/4a/ae/bf/4aaebf41f6b1f0a10991689cf0e90a19.gif');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+form {
+    height: auto;
+    width: 50rem;
+    background-color: rgba(0, 0, 0, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px solid rgba(58, 3, 3, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    margin: 10% 0%;
+  }
+  form * {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    form * {
+      color: #f1f0f0;
+    }
+  }
+  
+  
+  form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  input, textarea {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color:  #ffffff3a;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  option{
+    color: black;
+  }
+  
+  ::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+  
+  
+  :-ms-input-placeholder { 
+    color: white;
+   }
+   
+   ::-ms-input-placeholder { 
+    color: white;
+   }
+  
+  #gender{
+    background-color:  #362b2b48;
+    padding: 2%;
+    margin-top: 1%;
+  }
+  
+  .signup-btn{
+    width: 20rem;
+    display: block;
+    margin: auto;
+    margin-top: 3rem !important;
+    background-color: rgba(239, 239, 239, 0.356);
+    font-size: 1rem;
+  }
+
+
+  .signup-btn:hover{
+    background-color: rgba(207, 215, 212, 0.236);
+    color: black;
+  }
