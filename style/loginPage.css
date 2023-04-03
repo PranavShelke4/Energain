@@ -46,12 +46,12 @@ body {
 }
 
 .right-side{
-    padding: 5% 10%;
+    padding: 15%;
     font-family: 'Rubik', sans-serif;
 }
 
 .logo{
-    width: 5rem;
+    width: 6rem;
 }
 
 label{
@@ -63,7 +63,17 @@ label{
 }
 
 input{
-    width: 100%;
+    width: 70%;
     height: 2rem;
     border: 1px rgb(160, 156, 156) thick;
+}
+
+.loginbtn{
+    background: linear-gradient(117deg, rgba(40,208,224,1) 18%, rgba(46,88,252,1) 47%, rgba(142,45,253,1) 85%);
+    color: white;
+    padding: 2%;
+    font-size: 1.2rem;
+    height: auto;
+    border: none;
+    border-radius: 5px;
 }

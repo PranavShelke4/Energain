@@ -51,7 +51,7 @@
 			</div>
         </div>
         <div class="right-side">
-		<img class="logo" src="./assets/img/blueLogo.png" />
+		   <img class="logo" src="./assets/img/blueLogo.png" />
                 <h1>Hey, Hello 👋</h1>
 				<p>Enter The Information you entered while registering</p>
             <form class="login-form" method="POST" action="">
