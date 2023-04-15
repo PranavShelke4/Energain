@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./style/loginPage.css" />
+    <link rel="stylesheet" href="./style/Login.css" />
     <script>
     function showAlert(message) {
         alert(message);
@@ -14,24 +14,23 @@
 
 <body>
     <?php
+        session_start();
 		require_once('./db_connect.php');
 
 		if(isset($_POST['submit'])) {
-			// Retrieve form data
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 
-			// Validate form data (you can add your own validation rules here)
 			if(empty($email) || empty($password)) {
-				echo "All fields are required.";
+				// echo "All fields are required.";
+                
 			} else {
-				// Check if email and password combination exists in the database
 				$sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
 				$result = mysqli_query($conn, $sql);
 				if(mysqli_num_rows($result) > 0) {
-					// Login successful, redirect to dashboard page
-					header('Location: dashboard.php');
-					exit();
+				    $_SESSION['email'] = $email;
+				    header('Location: dashboard.php');
+				    exit();
 				} else {
 					// Invalid email and password combination, display alert
 					echo "<script>showAlert('Invalid email Or password.');</script>";
@@ -45,26 +44,32 @@
 
     <div class="loginSection">
         <div class="left-side">
-			<div class="left-side-inside-box">
-				digital platform for distance <snap style="color: rgb(10, 10, 26)">learning.</snap> 
-				<p style="font-size: 1.5rem;">You will never know everything.<br />but you will know more</p>
-			</div>
+            <div class="left-side-inside-box">
+                Digital platform for monitoring <snap style="color: rgb(10, 10, 26); font-weight: bold;">Elect. Usages.
+                </snap>
+                <p style="font-size: 1.5rem;">You will never late again.<br /></p>
+            </div>
         </div>
         <div class="right-side">
-		   <img class="logo" src="./assets/img/blueLogo.png" />
-                <h1>Hey, Hello 👋</h1>
-				<p>Enter The Information you entered while registering</p>
+            <img class="logo" src="./assets/logo/blueLogo.png" />
+            <h1>Hey, Hello 👋</h1>
+            <snap style="color: rgb(10, 10, 26); font-weight: bold;">Welcome To Energain,</snap>
+            <p>Please Enter Your Login Information.</p>
             <form class="login-form" method="POST" action="">
 
-                <label>Email :</label><br>
-                <input type="email" name="email" id="username"><br/><br/>
+                <!-- <label>Email :</label><br> -->
+                <input type="email" name="email" id="username" placeholder="Email"><br /><br />
 
-                <label>Password :</label><br>
-                <input type="password" name="password" id="password"><br/> <br/><br/>
+                <!-- <label>Password :</label><br> -->
+                <input type="password" name="password" id="password" placeholder="Password"><br /> <br /><br />
 
-                <input class="loginbtn" type="submit" name="submit" value="Login"><br/>
+                <input class="loginbtn" type="submit" name="submit" value="Login"><br />
+                <br />
+                <br />
 
-                <p>Don't have an account? <a class="signupbtn" href="signup.php">Sign up</a></p>
+                <p class="signupoption">Don't have an account? <a class="signupbtn" href="newSignup.php">Register</a>
+                </p>
+
             </form>
         </div>
     </div>
