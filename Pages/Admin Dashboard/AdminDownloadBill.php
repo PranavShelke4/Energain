@@ -14,7 +14,7 @@
 
     <div class="flex">
         <?php
-            require_once('./AdminNavbar.php');
+            require_once('../../components/Admin/AdminNavbar.php');
             require_once('../../components/Admin/GeneratedBill.php');
 ?>
     </div>

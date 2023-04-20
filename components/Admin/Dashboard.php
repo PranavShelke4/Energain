@@ -11,18 +11,18 @@
 </head>
 
 <body>
-        <div class="w-full bg-[#DFEBE7] p-6 overscroll-auto">
+        <div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto">
             
-            <div id="title-bar1">Users</div>
+            <div id="title-bar1">All Users</div>
 
 
             <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
                 <thead>
-                    <tr class="bg-[black] text-white text-2xl font-light">
+                    <tr class="bg-[black] text-white text-xl font-light">
                         <th class="border border-slate-600 ...">Sr.No.</th>
                         <th class="border border-slate-600 ...">Meter ID</th>
-                        <th class="border border-slate-600 ...">F Name</th>
-                        <th class="border border-slate-600 ...">L Name</th>
+                        <th class="border border-slate-600 ...">First Name</th>
+                        <th class="border border-slate-600 ...">Last Name</th>
                         <th class="border border-slate-600 ...">Age</th>
                         <th class="border border-slate-600 ...">Mobile</th>
                         <th class="border border-slate-600 ...">Gender</th>
@@ -63,13 +63,13 @@
             <div id="title-bar1">Upaid Bill Users</div>
 
 
-            <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
+            <table class="w-full  bg-[#D9D9D9] border-collapse border border-slate-500">
                 <thead>
-                    <tr class="bg-[black] text-white text-2xl font-light">
+                    <tr class="bg-[black] text-white text-xl font-light">
                         <th class="border border-slate-600 ...">Sr.No.</th>
                         <th class="border border-slate-600 ...">Meter ID</th>
-                        <th class="border border-slate-600 ...">F Name</th>
-                        <th class="border border-slate-600 ...">L Name</th>
+                        <th class="border border-slate-600 ...">First Name</th>
+                        <th class="border border-slate-600 ...">Last Name</th>
                         <th class="border border-slate-600 ...">Age</th>
                         <th class="border border-slate-600 ...">Mobile</th>
                         <th class="border border-slate-600 ...">Gender</th>

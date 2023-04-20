@@ -11,51 +11,100 @@
 </head>
 
 <body>
-        <div class="w-full bg-[#DFEBE7] p-6 overscroll-auto">
-            
-            <div id="title-bar1">Users</div>
+    <div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto">
+
+        <div id="title-bar1">Users</div>
+
+        <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
+            <thead>
+                <tr class="bg-[black] text-white text-2xl font-light">
+                    <th class="border border-slate-600 ...">Sr.No.</th>
+                    <th class="border border-slate-600 ...">Meter ID</th>
+                    <th class="border border-slate-600 ...">F Name</th>
+                    <th class="border border-slate-600 ...">L Name</th>
+                    <th class="border border-slate-600 ...">Email</th>
+                    <th class="border border-slate-600 ...">Unit</th>
+                    <th class="border border-slate-600 ...">Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-xl text-center font-normal">
+
+                <tr>
+                    <td class="border border-slate-700 ...">1</td>
+                    <td class="border border-slate-700 ...">12345</td>
+                    <td class="border border-slate-700 ...">Pranav</td>
+                    <td class="border border-slate-700 ...">Shelke</td>
+                    <td class="border border-slate-700 ...">pranavshelke4@gmail.com</td>
+                    <td class="border border-slate-700 ...">100</td>
+                    <td class="border border-slate-700 ...">
+                        <a href="../../Pages/Admin Dashboard/AdminGenerateBill.php">
+                            <button id="generate-bill">Generate Bill</button>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="border border-slate-700 ...">2</td>
+                    <td class="border border-slate-700 ...">12400</td>
+                    <td class="border border-slate-700 ...">Avadhut</td>
+                    <td class="border border-slate-700 ...">Shedage</td>
+                    <td class="border border-slate-700 ...">avadhutshedage@gmail.com</td>
+                    <td class="border border-slate-700 ...">50</td>
+                    <td class="border border-slate-700 ..."><button id="generate-bill">Generate Bill</button></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div id="title-bar1">Bill Generated Users</div>
 
 
-            <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
-                <thead>
-                    <tr class="bg-[black] text-white text-2xl font-light">
-                        <th class="border border-slate-600 ...">Sr.No.</th>
-                        <th class="border border-slate-600 ...">Meter ID</th>
-                        <th class="border border-slate-600 ...">F Name</th>
-                        <th class="border border-slate-600 ...">L Name</th>
-                        <th class="border border-slate-600 ...">Email</th>
-                        <th class="border border-slate-600 ...">Unit</th>
-                        <th class="border border-slate-600 ...">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="text-xl text-center font-normal">
-                    
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">12345</td>
-                        <td class="border border-slate-700 ...">Pranav</td>
-                        <td class="border border-slate-700 ...">Shelke</td>
-                        <td class="border border-slate-700 ...">pranavshelke4@gmail.com</td>
-                        <td class="border border-slate-700 ...">100</td>
-                        <td class="border border-slate-700 ..."><a href=""><button id="generate-bill">Generate Bill</button></a></td>
-                    </tr>
+        <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
+            <thead>
+                <tr class="bg-[black] text-white text-2xl font-light">
+                    <th class="border border-slate-600 ...">Sr.No.</th>
+                    <th class="border border-slate-600 ...">Meter ID</th>
+                    <th class="border border-slate-600 ...">F Name</th>
+                    <th class="border border-slate-600 ...">L Name</th>
+                    <th class="border border-slate-600 ...">Email</th>
+                    <th class="border border-slate-600 ...">Unit</th>
+                    <th class="border border-slate-600 ...">Date</th>
+                    <th class="border border-slate-600 ...">Download</th>
+                </tr>
+            </thead>
+            <tbody class="text-xl text-center font-normal">
 
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">12400</td>
-                        <td class="border border-slate-700 ...">Avadhut</td>
-                        <td class="border border-slate-700 ...">Shedage</td>
-                        <td class="border border-slate-700 ...">avadhutshedage@gmail.com</td>
-                        <td class="border border-slate-700 ...">50</td>
-                        <td class="border border-slate-700 ..."><button id="generate-bill">Generate Bill</button></td>
-                
-                    </tr>
+                <tr>
+                    <td class="border border-slate-700 ...">1</td>
+                    <td class="border border-slate-700 ...">12345</td>
+                    <td class="border border-slate-700 ...">Pranav</td>
+                    <td class="border border-slate-700 ...">Shelke</td>
+                    <td class="border border-slate-700 ...">pranavshelke4@gmail.com</td>
+                    <td class="border border-slate-700 ...">100</td>
+                    <td class="border border-slate-700 ...">31/03/2023</td>
+                    <td class="border border-slate-700 ..."><a href=""><button id="generate-bill">Download
+                                Bill</button></a></td>
+                </tr>
 
-                </tbody>
-            </table>
-                  
-          
-        </div>
+                <tr>
+                    <td class="border border-slate-700 ...">2</td>
+                    <td class="border border-slate-700 ...">12400</td>
+                    <td class="border border-slate-700 ...">Avadhut</td>
+                    <td class="border border-slate-700 ...">Shedage</td>
+                    <td class="border border-slate-700 ...">avadhutshedage@gmail.com</td>
+                    <td class="border border-slate-700 ...">50</td>
+                    <td class="border border-slate-700 ...">31/03/2023</td>
+                    <td class="border border-slate-700 ..."><a href=""><button id="generate-bill">Download
+                                Bill</button></a></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+    </div>
 
     <script src="./script/script.js" async defer></script>
 </body>

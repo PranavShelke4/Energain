@@ -1,81 +1,81 @@
-.input-box{
-    box-sizing: border-box;
-    width: 948px;
-    height: 50px;
-    left: 380px;
-    top: 171px;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-  }
-  .subButton{
-    width: 141px;
-    height: 50px;
-    padding-right: 0rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    background: #FFFFFF;
-    border: 1px solid #58F768;
-    border-radius: 10px;
-  }
-  .cancelButton{
-    width: 141px;
-    height: 50px;
-    padding-right: 0rem;
-    margin-left: 2rem;
-    /* left: 654px; */
-    /* top: 671px; */
-    background: #FFFFFF;
-    border: 1px solid #58F768;
-    border-radius: 10px;
-  }
-  .main-sec{
-      padding-top: 2rem !important;
-      margin-right: 5rem;
-      /* margin-left: 10rem; */
-  }  
-    .update{
-       width: 900px; 
-      height: 50px; 
-    
-      /* margin-top: 10px; */
-    
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin-bottom: 1rem !important;
-    }
-    
-    button{
-      position: absolute;
-      width: 141px;
-      height: 50px;
-      border: 1px solid rgba(0, 0, 0, 0.5);
-      box-sizing: border-box;
-      border-radius: 10px;
-      background-color: white;
-      font-size: 15px;
-      margin-top: -2rem !important;
-      /* margin-left: 15rem !important; */
-    
-  
-    }
-    .submit{
-      border-color: green;
-      /* margin-left: 25rem !important; */
-    }
-    .cancel{
-      border-color: red;
-    }
-    
-    .subButton:hover{
-      background-color: green;
-      color: white;
-    }
-    .cancelButton:hover{
-      background-color: red;
-      color: white;
-    }
+.input-box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.subButton {
+  width: 120px;
+  height: 45px;
+  margin-right: 3%;
+  padding-right: 0rem;
+  background: #ffffff;
+  border: 1px solid green;
+  border-radius: 10px;
+}
+.cancelButton {
+  width: 120px;
+  height: 45px;
+  padding-right: 0rem;
+  background: #ffffff;
+  border: 1px solid #ff0000 !important;
+  border-radius: 10px;
+}
+.main-sec {
+  /* padding-top: 2rem !important; */
+  margin-right: 5rem;
+  text-align: center;
+}
+.update {
+  width: 900px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  width: 141px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 15px;
+  margin-top: -2rem !important;
+}
+
+.subButton:hover {
+  background-color: green;
+  color: white;
+}
+.cancelButton:hover {
+  background-color: red;
+  color: white;
+}
+
+#title-bar1 {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 35px 12px 23px rgba(201, 176, 255, 0.25);
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5%;
+  margin: 3% 0;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 39px;
+  /* identical to box height */
+  color: #000000;
+}

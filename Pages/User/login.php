@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="right-side">
-            <img class="logo" src="../assets/logo/blueLogo.png" />
+            <img class="logo" src="../../assets/logo/blueLogo.png" />
             <h1>Hey, Hello 👋</h1>
             <snap style="color: rgb(10, 10, 26); font-weight: bold;">Welcome To Energain,</snap>
             <p>Please Enter Your Login Information.</p>

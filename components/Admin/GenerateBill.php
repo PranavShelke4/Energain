@@ -11,100 +11,42 @@
 </head>
 
 <body>
-        <div class="w-full bg-[#DFEBE7] p-6 overscroll-auto">
-            
+    <div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto">
+        <div class='main-sec'>
+          <div id="title-bar1">Generate Bill</div>
+            <div class="upd_section">
+                <form>
+                    <div class="flex gap-6">
+                        <input class='input-box pl-4' Placeholder="Meter ID" type="text" />
+                        <input class='input-box pl-4' Placeholder="First Name" type="text" />
+                        <input class='input-box pl-4' Placeholder="Last Name" type="text" />
+                    </div>
 
-            <div class='main-sec'>
-    <div class="upd_section">
-      <form>
-      <div>
-          <label>Meter ID</label><br/>
-          <input 
-          class='input-box'
-          type ="text"
-         
-          />
+                    <div class="flex gap-6">
+                        <input class='input-box pl-4' Placeholder="Age" type="number" />
+                        <input class='input-box pl-4' Placeholder="Mobile Number" type="number" />
+                    </div>
+
+                    <div class="flex gap-6">
+                        <input class='input-box pl-4' Placeholder="Email" type="text" />
+                        <input class='input-box pl-4' Placeholder="Gender" type="text" />
+                    </div>
+
+                    <input class='input-box pl-4' Placeholder="Address" type="text" />
+
+                    <input class='input-box pl-4' Placeholder="Meter Photo" type="image" />
+
+                    <div class="flex gap-6">
+                        <input class='input-box pl-4' Placeholder="Unit" type="number" />
+                        <input class='input-box pl-4' Placeholder="Confirm Unit" type="number" />
+                    </div>
+
+                    <input class="subButton" type="submit" value="Submit" />
+                    <input class="cancelButton" type="button" value="Cancel" />
+                </form>
+            </div>
         </div>
-        
-        <div>
-          <label>First Name</label><br/>
-          <input 
-          class='input-box'
-          type ="text"
-          />
-        </div>
-        <div>
-          <label>Last Name</label><br/>
-          <input 
-          class='input-box'
-          type ="text"
-          />
-        </div>
-        <div>
-          <label>Age</label><br/>
-          <input 
-          class='input-box'
-          type = "number"
-          />
-        </div>
-        <div>
-          <label>Mobile</label><br/>
-          <input 
-          class='input-box'
-          type = "number"
-          />
-        </div>
-        <div>
-          <label>Email</label><br/>
-          <input 
-          class='input-box'
-          type = "text"
-          />
-        </div>
-        <div>
-          <label>Address</label><br/>
-          <input 
-          class='input-box'
-          type = "text"
-          />
-        </div>
-        <div>
-          <label>Gender</label><br/>
-          <input 
-          class='input-box'
-          type = "text"
-          />
-        </div>
-        <div>
-          <label>Meter Photo</label><br/>
-          <input 
-          class='input-box'
-          type = "image"
-          />
-        </div>
-        <div>
-          <label>Unit</label><br/>
-          <input 
-          class='input-box'
-          type = "number"
-          />
-        </div>
-        <div>
-          <label>Confirm Unit</label><br/>
-          <input 
-          class='input-box'
-          type = "number"
-          />
-        </div>
-        <input class ="subButton" type="submit" value="Submit"/>
-        <input class ="cancelButton" type="button" value="Cancel"/>
-      </form>
     </div>
-    </div>
-          
-                  
-          
-        </div>
 
     <script src="./script/script.js" async defer></script>
 </body>
