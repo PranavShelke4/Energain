@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../style/Login.css" />
+    <link rel="stylesheet" href="../../style/Login.css" />
     <script>
     function showAlert(message) {
         alert(message);
@@ -15,7 +15,7 @@
 <body>
     <?php
         session_start();
-		require_once('../db_connect.php');
+		require_once('../../db_connect.php');
 
 		if(isset($_POST['submit'])) {
 			$email = $_POST['email'];

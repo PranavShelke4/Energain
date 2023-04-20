@@ -1,35 +1,29 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../style/bill.css" />
-    </head>
-    <body>
 
-    <div class="w-full bg-[#DFEBE7] p-6 overscroll-auto">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style/index.css" />
+</head>
+
+<body>
+        <div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto">
             <div id="notice">Notice</div>
             <div class="flex flex-wrap">
                 <div id="card" class="w-60 text-2xl h-36 ml-10 text-white">
-                Current Due <br /> Bill :- 60 ₹
+                    Current Unit :- 60
                 </div>
                 <div id="card2" class="w-60 text-2xl h-36 ml-10 text-white">
-                    Last Month <br /> Bill :- 900 ₹
+                    Last Month Unit :- 130
                 </div>
                 <div id="card3" class="w-60 text-2xl h-36 ml-10 text-white">
-                Pending <br /> Due :- No
+                    Current Slab :-
                 </div>
             </div>
-            <div id="title-bar1">Unpaid Bills</div>
+            <div id="title-bar1">Electricuty Uses</div>
 
 
             <?php
-                if (!empty($unpaid_bill)) {
+                if (!empty($electricityuses_data)) {
             ?>
 
             <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
@@ -38,13 +32,12 @@
                         <th class="border border-slate-600 ...">Sr.No.</th>
                         <th class="border border-slate-600 ...">Date </th>
                         <th class="border border-slate-600 ...">Units Consumed</th>
-                        <th class="border border-slate-600 ...">Price Before Due Date</th>
-                        <th class="border border-slate-600 ...">Price After Due Date</th>
+                        <th class="border border-slate-600 ...">Price</th>
                     </tr>
                 </thead>
                 <tbody class="text-xl text-center font-normal">
                     <?php
-                        foreach ($unpaid_bill as $row) {
+                        foreach ($electricityuses_data as $row) {
                     ?>
                     <tr>
                         <td class="border border-slate-700 ..."><?php echo $row['srno']; ?></td>
@@ -63,10 +56,10 @@
             }
             ?>
 
-            <div id="title-bar1">Paid Bills</div>
+            <div id="title-bar1">Solar Electricity Uses</div>
 
             <?php
-                if (!empty($paid_bill_data)) {
+                if (!empty($solarusages_data)) {
             ?>
 
             <table class="w-full bg-[#D9D9D9] border-collapse border border-slate-500">
@@ -80,13 +73,12 @@
                 </thead>
                 <tbody class="text-xl text-center font-normal">
                     <?php
-                        foreach ($paid_bill_data as $row) {
+                        foreach ($solarusages_data as $row) {
                     ?>
                     <tr>
                         <td class="border border-slate-700 ..."><?php echo $row['srno']; ?></td>
                         <td class="border border-slate-700 ..."><?php echo $row['data']; ?></td>
                         <td class="border border-slate-700 ..."><?php echo $row['unitconsume']; ?> Units</td>
-                        <td class="border border-slate-700 ..."><?php echo $row['price']; ?> ₹</td>
                         <td class="border border-slate-700 ..."><?php echo $row['price']; ?> ₹</td>
                     </tr>
                     <?php
@@ -101,5 +93,7 @@
             ?>
         </div>
 
-    </body>
+    <script src="./script/script.js" async defer></script>
+</body>
+
 </html>

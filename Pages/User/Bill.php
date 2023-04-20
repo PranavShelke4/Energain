@@ -6,7 +6,7 @@
     <body>
     <?php
         session_start();
-        require_once('../db_connect.php');
+        require_once('../../db_connect.php');
 
         $unpaid_bill_query = "SELECT * FROM unpaidbill";
         $unpaid_bill_result = mysqli_query($conn,$unpaid_bill_query);
@@ -43,9 +43,9 @@ mysqli_close($conn);
     <div class="flex">
         <?php
 
-            require_once('../components/navbar.php');
+            require_once('../../components/User/navbar.php');
 
-            require_once('../components/billSection.php');
+            require_once('../../components/User/billSection.php');
         ?>
     </div>
         

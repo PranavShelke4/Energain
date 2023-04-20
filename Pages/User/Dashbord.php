@@ -7,13 +7,13 @@
     <title>Dashbord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../../style/index.css" />
 </head>
 
 <body>
     <?php
         session_start();
-        require_once('../db_connect.php');
+        require_once('../../db_connect.php');
 
         $electricityuses_query = "SELECT * FROM electricityuses";
         $electricityuses_result = mysqli_query($conn,$electricityuses_query);
@@ -51,9 +51,9 @@ mysqli_close($conn);
     <div class="flex">
         <?php
 
-            require_once('../components/navbar.php');
+            require_once('../../components/User/navbar.php');
 
-            require_once('../components/homeDashbord.php');
+            require_once('../../components/User/homeDashbord.php');
         ?>
     </div>
 
