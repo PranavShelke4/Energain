@@ -10,14 +10,14 @@
     <body>
          <div class="w-60 h-screen justify-items-center bg-[#11101D] text-white text-center text-lg">
             <div class="mt-10 grid justify-items-center">
-                <img class="w-20" src="./assets/logo/logo.png" />
+                <img class="w-20" src="../assets/logo/logo.png" />
             </div>
 
             <div class="mt-10 grid justify-center">
-                <img class="w-24 ml-28" src=".\assets\img\profilePhoto.png" />
+                <img class="w-24 ml-28" src="..\assets\img\profilePhoto.png" />
                 <snap>Pranav Shelke<br>Metter id : 3242348</snap>
                 <div class="mt-10 grid justify-items-end">
-                    <a href="#">
+                    <a href="../Pages/Dashbord.php">
                         <snap class="justify-items-start flex flex-wrap"
                             style="border-top: 1px white solid; gap: 1rem; width: 20rem; padding: 0.5rem; padding-left: 4rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2"
@@ -30,7 +30,7 @@
                             </svg>Home
                         </snap>
                     </a>
-                    <a href="#">
+                    <a href="../Pages/Bill.php">
                         <snap class="justify-items-start flex flex-wrap"
                             style="border-top: 1px white solid; width: 20rem; padding: 0.5rem; padding-left: 4rem; gap: 1rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-receipt-2"
@@ -68,7 +68,7 @@
                             </svg> Profile
                         </snap>
                     </a>
-                    <a href="logout.php">
+                    <a href="./logout.php">
                         <snap class="justify-items-start flex flex-wrap"
                             style="border-top: 1px white solid; border-bottom: 1px white solid; width: 20rem; padding: 0.5rem; padding-left: 4rem; gap: 1rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout"

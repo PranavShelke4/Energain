@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./style/Login.css" />
+    <link rel="stylesheet" href="../style/Login.css" />
     <script>
     function showAlert(message) {
         alert(message);
@@ -15,7 +15,7 @@
 <body>
     <?php
         session_start();
-		require_once('./db_connect.php');
+		require_once('../db_connect.php');
 
 		if(isset($_POST['submit'])) {
 			$email = $_POST['email'];
@@ -29,7 +29,7 @@
 				$result = mysqli_query($conn, $sql);
 				if(mysqli_num_rows($result) > 0) {
 				    $_SESSION['email'] = $email;
-				    header('Location: dashboard.php');
+				    header('Location: Dashbord.php');
 				    exit();
 				} else {
 					// Invalid email and password combination, display alert
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="right-side">
-            <img class="logo" src="./assets/logo/blueLogo.png" />
+            <img class="logo" src="../assets/logo/blueLogo.png" />
             <h1>Hey, Hello 👋</h1>
             <snap style="color: rgb(10, 10, 26); font-weight: bold;">Welcome To Energain,</snap>
             <p>Please Enter Your Login Information.</p>
@@ -67,7 +67,7 @@
                 <br />
                 <br />
 
-                <p class="signupoption">Don't have an account? <a class="signupbtn" href="newSignup.php">Register</a>
+                <p class="signupoption">Don't have an account? <a class="signupbtn" href="Signup.php">Register</a>
                 </p>
 
             </form>

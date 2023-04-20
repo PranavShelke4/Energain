@@ -53,8 +53,8 @@ mysqli_close($conn);
 
             require_once('../components/navbar.php');
 
-            require_once('../components/Home/homeDashbord.php');
-?>
+            require_once('../components/homeDashbord.php');
+        ?>
     </div>
 
 </body>
