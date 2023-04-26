@@ -15,32 +15,39 @@
 <body>
     <?php
         session_start();
-		require_once('../../db_connect.php');
+        require_once('../../db_connect.php');
 
-		if(isset($_POST['submit'])) {
-			$email = $_POST['email'];
-			$password = $_POST['password'];
+        if(isset($_POST['submit'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
-			if(empty($email) || empty($password)) {
-				// echo "All fields are required.";
-                
-			} else {
-				$sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-				$result = mysqli_query($conn, $sql);
-				if(mysqli_num_rows($result) > 0) {
-				    $_SESSION['email'] = $email;
-				    header('Location: Dashbord.php');
-				    exit();
-				} else {
-					// Invalid email and password combination, display alert
-					echo "<script>showAlert('Invalid email Or password.');</script>";
-				}
-			}
-		}
+            // Validate form data (you can add your own validation rules here)
+            if(empty($email) || empty($password)) {
+                echo "All fields are required.";
+            } else {
+                $sql = "SELECT * FROM users WHERE email = '$email'";
+                $result = mysqli_query($conn, $sql);
 
-		// Close database connection
-		mysqli_close($conn);
-	?>
+                if(mysqli_num_rows($result) == 1) {
+                    $row = mysqli_fetch_assoc($result);
+
+                    // Verify password
+                    if(password_verify($password, $row['password'])) {
+                        $_SESSION['email'] = $email;
+                        header("Location: Dashbord.php");
+                        exit();
+                    } else {
+                        echo "<script>showAlert('Invalid email or password.');</script>";
+                    }
+                } else {
+                    echo "<script>showAlert('Invalid email or password.');</script>";
+                }
+            }
+        }
+
+        // Close database connection
+        mysqli_close($conn);
+    ?>
 
     <div class="loginSection">
         <div class="left-side">

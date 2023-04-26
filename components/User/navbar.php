@@ -8,6 +8,19 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
+        <?php
+            require_once('../../db_connect.php');
+
+            // Get user's first name, last name, and meter id
+            $email = $_SESSION['email'];
+            $user_info_query = "SELECT fname, lname, meter_id FROM users WHERE email = '$email'";
+            $user_info_result = mysqli_query($conn, $user_info_query);
+            $user_info_row = mysqli_fetch_assoc($user_info_result);
+            $fname = $user_info_row['fname'];
+            $lname = $user_info_row['lname'];
+            $meter_id = $user_info_row['meter_id'];
+
+        ?>
          <div class="w-64 h-screen fixed  justify-items-center bg-[#11101D] text-white text-center text-lg">
             <div class="mt-10 grid justify-items-center">
                 <img class="w-20" src="../../assets/logo/logo.png" />
@@ -15,7 +28,7 @@
 
             <div class="mt-10 grid justify-center">
                 <img class="w-24 ml-28" src="..\..\assets\img\profilePhoto.png" />
-                <snap>Pranav Shelke<br>Metter id : 3242348</snap>
+                <snap><?php echo $fname . ' ' . $lname; ?><br>Meter ID: <?php echo $meter_id; ?></snap>
                 <div class="mt-10 grid justify-items-end">
                     <a href="../../Pages/User/Dashbord.php">
                         <snap class="justify-items-start flex flex-wrap"
