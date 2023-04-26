@@ -26,7 +26,7 @@
             $fname = $_POST['fname'];
             $lname = $_POST['lname'];
             $age = $_POST['age'];
-            $number = $_POST['number'];
+            $mobile_no = $_POST['mobile_no'];
             $gender = $_POST['gender'];
             $address = $_POST['address'];
             $email = $_POST['email'];
@@ -35,7 +35,7 @@
             $meter_id = $_POST['meter_id'];
  
             // Validate form data (you can add your own validation rules here)
-            if(empty($fname) || empty($lname) || empty($age) || empty($number) || empty($gender) || empty($address) || empty($email) || empty($password) || empty($cpassword)) {
+            if(empty($fname) || empty($lname) || empty($age) || empty($mobile_no) || empty($gender) || empty($address) || empty($email) || empty($password) || empty($cpassword)) {
                 echo "All fields are required.";
             } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 echo "Invalid email address.";
@@ -53,7 +53,7 @@
                     // Hash the password before storing it in the database
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-                    $sql = "INSERT INTO users (meter_id, fname, lname, age, number, gender, address, email, password) VALUES ('$meter_id', '$fname', '$lname', '$age', '$number', '$gender', '$address', '$email', '$hashed_password')";
+                    $sql = "INSERT INTO users (meter_id, fname, lname, age, mobile_no, gender, address, email, password) VALUES ('$meter_id', '$fname', '$lname', '$age', '$mobile_no', '$gender', '$address', '$email', '$hashed_password')";
                     if(mysqli_query($conn, $sql)) {
                         // Link user table meter_id to other tables meter_id
                         $sql = "UPDATE uploaddate SET meter_id='$meter_id' WHERE meter_id = (SELECT meter_id FROM users WHERE meter_id='$meter_id')";
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <input type="text" id="mail" name="number" placeholder="Number">
+                                        <input type="text" id="mail" name="mobile_no" placeholder="mobile number">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">

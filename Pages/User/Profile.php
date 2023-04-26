@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Profile</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../../style/uploadData.css" />
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style/uploadData.css" />
+</head>
+
+<body>
     <?php
         session_start();
         require_once('../../db_connect.php');
@@ -20,7 +22,39 @@
             exit();
         }
 
-        
+        if(isset($_POST['submit'])) {
+            $current_password = $_POST['current_password'];
+            $new_password = $_POST['new_password'];
+            $confirm_password = $_POST['confirm_password'];
+    
+            $email = $_SESSION['email'];
+    
+            $user_query = "SELECT * FROM users WHERE email = '$email'";
+            $user_result = mysqli_query($conn, $user_query);
+    
+            if(mysqli_num_rows($user_result) == 1) {
+                $user_row = mysqli_fetch_assoc($user_result);
+    
+                // Check if the current password entered by the user matches the one in the database
+                if(password_verify($current_password, $user_row['password'])) {
+                    // Check if the new password matches the confirm password
+                    if($new_password == $confirm_password) {
+                        // Update the user's password
+                        $new_password_hash = password_hash($new_password, PASSWORD_DEFAULT);
+                        $update_query = "UPDATE users SET password = '$new_password_hash' WHERE email = '$email'";
+                        mysqli_query($conn, $update_query);
+                        echo "Password updated successfully!";
+                    } else {
+                        echo "New password and confirm password do not match!";
+                    }
+                } else {
+                    echo "Current password is incorrect!";
+                }
+            } else {
+                echo "User not found!";
+            }
+        }
+
     ?>
 
     <div class="flex">
@@ -28,46 +62,46 @@
             require_once('../../components/User/navbar.php');
         ?>
 
-<div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto overflow-auto">
-        <div id="notice">Notice</div>
-        <div id="title-bar1">Security Setting</div>
-        <div class="box">
-            <form type="submit">
-                    <input class="inputs mb-4" type="text" placeholder="Current Password" />
-                    <input class="inputs mb-4" type="text" placeholder="New Password" />
-                    <input class="inputs mb-4" type="text" placeholder="Conform New Password" />
-                <button class="submit-btn">Submit</button>
+        <div class="w-full pl-72 bg-[#DFEBE7] p-6 overscroll-auto overflow-auto">
+            <div id="notice">Notice</div>
+            <div id="title-bar1">Security Setting</div>
+            <div class="box">
+                <form method="POST">
+                    <input class="inputs mb-4" type="text" name="current_password" placeholder="Current Password" />
+                    <input class="inputs mb-4" type="text" name="new_password" placeholder="New Password" />
+                    <input class="inputs mb-4" type="text" name="confirm_password" placeholder="Conform New Password" />
+                    <input class="submit-btn" type="submit" name="submit" />
+                </form>
+            </div>
 
-            </form>
-        </div>
+            <div id="title-bar1">Account Setting</div>
 
-        <div id="title-bar1">Account Setting</div>
+            <div class="box">
+                <form type="submit">
+                    <div class="flex gap-16 mb-6">
+                        <input class="inputs" type="text" placeholder="First Name" />
+                        <input class="inputs" type="text" placeholder="Last Name" />
+                    </div>
 
-        <div class="box">
-            <form type="submit">
-                <div class="flex gap-16 mb-6">
-                    <input class="inputs" type="text" placeholder="First Name" />
-                    <input class="inputs" type="text" placeholder="Last Name" />
-                </div>
+                    <div class="flex gap-16 mb-6">
+                        <input class="inputs" type="text" placeholder="Email" />
+                        <input class="inputs" type="number" placeholder="Mobile No." />
+                    </div>
 
-                <div class="flex gap-16 mb-6">
-                    <input class="inputs" type="text" placeholder="Email" />
-                    <input class="inputs" type="number" placeholder="Mobile No." />
-                </div>
+                    <div class="flex gap-16 mb-6">
+                        <input class="inputs" type="text" placeholder="Gender" />
+                        <input class="inputs" type="text" placeholder="Address" />
+                    </div>
 
-                <div class="flex gap-16 mb-6">
-                    <input class="inputs" type="text" placeholder="Gender" />
                     <input class="inputs" type="text" placeholder="Address" />
-                </div>
 
-                  <input class="inputs" type="text" placeholder="Address" />
+                    <button class="submit-btn mt-2">Submit</button>
 
-                <button class="submit-btn mt-2">Submit</button>
+                </form>
+            </div>
 
-            </form>
         </div>
+    </div>
+</body>
 
-    </div>
-    </div>
-    </body>
 </html>
