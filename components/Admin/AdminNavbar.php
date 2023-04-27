@@ -15,7 +15,7 @@
 
             <div class="mt-10 grid justify-center">
                 <img class="w-24 ml-28" src="..\..\assets\img\profilePhoto.png" />
-                <snap>Pranav Shelke<br>Metter id : 3242348</snap>
+                <snap>Pranav Shelke<br>Admin</snap>
                 <div class="mt-10 grid justify-items-end">
                     <a href="../../Pages/Admin Dashboard/AdminDashboard.php">
                         <snap class="justify-items-start flex flex-wrap"
@@ -56,7 +56,7 @@
                             </svg>Upload Data
                         </snap>
                     </a> -->
-                    <a href="#">
+                    <!-- <a href="#">
                         <snap class="justify-items-start flex flex-wrap"
                             style="border-top: 1px white solid; width: 19rem; padding: 0.5rem; padding-left: 5.5rem;  margin-left: -8%; gap: 1rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="28"
@@ -67,7 +67,7 @@
                                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                             </svg> Profile
                         </snap>
-                    </a>
+                    </a> -->
                     <a href="../../Pages/Admin Dashboard/Logout.php">
                         <snap class="justify-items-start flex flex-wrap"
                             style="border-top: 1px white solid; border-bottom: 1px white solid; width: 19rem; padding: 0.5rem; padding-left: 5.5rem;  margin-left: -8%; gap: 1rem;">

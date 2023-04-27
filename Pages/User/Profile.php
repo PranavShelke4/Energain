@@ -55,6 +55,35 @@
             }
         }
 
+
+        // Get user info
+        $user_info_query = "SELECT fname, lname, mobile_no, meter_id FROM users WHERE email = '$email'";
+        $user_info_result = mysqli_query($conn, $user_info_query);
+        $user_info_row = mysqli_fetch_assoc($user_info_result);
+        $fname = $user_info_row['fname'] ?? "";
+        $lname = $user_info_row['lname'] ?? "";
+        $mobile_no = $user_info_row['mobile_no'] ?? "";
+        $meter_id = $user_info_row['meter_id'] ?? "";
+
+        
+        // if(isset($_POST['submit2'])) {
+        //     $fname = $_POST['fname'];
+        //     $lname = $_POST['lname'];
+        //     $emailid = $_POST['emailid'];
+        //     $mobile_no = $_POST['mobile_no'];
+        //     $gender = $_POST['gender'];
+        //     $address = $_POST['address'];
+
+        //     $insert_query = "INSERT INTO users (fname, lname, emailid, mobile_no, gender, address) VALUES ('$fname', '$lname', '$emailid', '$mobile_no', '$gender', '$address')";
+        //     $insert_result = mysqli_query($conn, $insert_query);
+
+        //     if($insert_result) {
+        //         echo "Data inserted successfully!";
+        //     } else {
+        //         echo "Error inserting data: " . mysqli_error($conn);
+        //     }
+        // }
+
     ?>
 
     <div class="flex">
@@ -77,27 +106,25 @@
             <div id="title-bar1">Account Setting</div>
 
             <div class="box">
-                <form type="submit">
+                <form method="post">
                     <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="text" placeholder="First Name" />
-                        <input class="inputs" type="text" placeholder="Last Name" />
+                        <input class="inputs" type="text" name="fname" placeholder="First Name" required />
+                        <input class="inputs" type="text" name="lname" placeholder="Last Name" required />
                     </div>
 
                     <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="text" placeholder="Email" />
-                        <input class="inputs" type="number" placeholder="Mobile No." />
+                        <input class="inputs" type="email" name="email" placeholder="Email" required />
+                        <input class="inputs" type="number" name="mobile_no" placeholder="Mobile No." required />
                     </div>
 
                     <div class="flex gap-16 mb-6">
-                        <input class="inputs" type="text" placeholder="Gender" />
-                        <input class="inputs" type="text" placeholder="Address" />
+                        <input class="inputs" type="text" name="gender" placeholder="Gender" required />
+                        <input class="inputs" type="text" name="address" placeholder="Address" required />
                     </div>
 
-                    <input class="inputs" type="text" placeholder="Address" />
-
-                    <button class="submit-btn mt-2">Submit</button>
-
+                    <button class="submit-btn mt-2" type="submit2" name="submit2">Submit</button>
                 </form>
+
             </div>
 
         </div>
